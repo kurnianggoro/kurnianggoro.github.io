@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<base href="" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />  
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <link rel="stylesheet" href="/wp-content/themes/why-hello-there/style.css" type="text/css" media="screen" />
+  <link rel="pingback" href="/xmlrpc.php" />
+  <title>Recurrent Convolutional Network for Video-based Person Re-Identification &#8211; L. Kurnianggoro</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="L. Kurnianggoro &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="L. Kurnianggoro &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="L. Kurnianggoro &raquo; Recurrent Convolutional Network for Video-based Person Re-Identification Comments Feed" href="/recurrent-convolutional-network-for-video-based-person-re-identification/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https://s.w.org/images/core/emoji/2.3/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/2.3/svg/","svgExt":".svg","source":{"concatemoji":"http:///wp-includes/js/wp-emoji-release.min.js?ver=4.9.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='whyhellothere-font-awesome-css-css'  href='/wp-content/themes/why-hello-there/assets/css/font-awesome.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='whyhellothere-flexslider-css-css'  href='/wp-content/themes/why-hello-there/flexslider/flexslider.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='whyhellothere-style-css'  href='/wp-content/themes/why-hello-there/style.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='googleFont-css'  href='//fonts.googleapis.com/css?family=Voltaire%7CBitter%3A400%2C700%7CFjalla+One&#038;ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/wp-content/themes/why-hello-there/assets/css/font-awesome.css?ver=4.0.3' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/themes/why-hello-there/assets/js/modernizr-custom.js?ver=2.7.1'></script>
+<script type='text/javascript' src='/wp-content/themes/why-hello-there/flexslider/jquery.flexslider.js?ver=2.2.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Notes on Variational Autoencoder' href='/notes-on-variational-autoencoder/' />
+<link rel='next' title='A Siamese Long Short-Term Memory Architecture for Human Re-Identication' href='/a-siamese-long-short-term-memory-architecture-for-human-re-identication/' />
+<meta name="generator" content="WordPress 4.9.1" />
+<link rel="canonical" href="/recurrent-convolutional-network-for-video-based-person-re-identification/" />
+<link rel='shortlink' href='/?p=38' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Frecurrent-convolutional-network-for-video-based-person-re-identification%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Frecurrent-convolutional-network-for-video-based-person-re-identification%2F&#038;format=xml" />
+		<style type="text/css">
+
+		
+		.entry-category a, .entry-content a.more-link, .slider-caption .slider-read-more, article:after, #postscript a:hover { color: #d12424 }
+		.site-title,.right-sidebar .widget .heading, #footer, .search-form input[type="submit"]:hover, .page-numbers:hover, header .primary-navigation li ul li a:hover { background: #d12424 }
+		.right-sidebar .widget .heading:after { border-top-color: #d12424 }
+		.right-sidebar .widget ul li:hover { border-left-color: #d12424 }
+
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-38 single-format-standard postscript-sidebar singular">
+  <div id="page">
+  
+    <header id="masthead" class="site-header">
+      <div class="site-header-inner clearfix">
+        <div class="container">
+          <h1 class="site-title"><a href="/" rel="home">L. Kurnianggoro</a></h1>
+          <nav id="nav" class="site-nav" role="navigation">
+            <div class="social"> 
+              <div class="header-search"><form role="search" method="get" class="search-form" action="/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div>
+              <a class="search-btn"><i class="fa fa-search"></i></a>
+                                        </div>
+            <a href="#nav" title="Show navigation"><i class="fa fa-bars"></i></a>
+            <a href="#hide" title="Hide navigation"><i class="fa fa-bars"></i></a>
+            <div class="menu"></div>
+          </nav>
+        </div>
+      </div>
+    </header><!-- #masthead -->
+
+    <div id="main" class="clearfix">
+      <div class="main-inner">
+        <div class="container">
+<div id="main-content" class="main-content">
+	<div class="main-content-inner">
+
+		<article id="post-38" class="post-38 post type-post status-publish format-standard hentry category-computer-vision category-deep-learning">
+
+    
+     
+      <div class="author-info">
+        <img alt='' src='http://0.gravatar.com/avatar/6e1cd3c65a25cd6ea11cdc996f331484?s=90&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6e1cd3c65a25cd6ea11cdc996f331484?s=180&#038;d=mm&#038;r=g 2x' class='avatar avatar-90 photo' height='90' width='90' /><a class="name" href="/author/kurnianggoro/" rel="author">kurnianggoro</a>      </div> 
+    
+    <div class="content-wrapper">
+
+      <div class="entry-meta">
+        <span class="entry-category"><a href="/category/computer-vision/" rel="category tag">Computer Vision</a>, <a href="/category/deep-learning/" rel="category tag">Deep Learning</a></span>
+        <span class="entry-date"><a href="/recurrent-convolutional-network-for-video-based-person-re-identification/" rel="bookmark"><time datetime="2018-01-07T17:21:50+00:00">January 7, 2018</time></a></span>
+        <span class="entry-comments"><a href="/recurrent-convolutional-network-for-video-based-person-re-identification/#respond" class="meta-element comment-link" ><span class="dsq-postid" data-dsqidentifier="38 /?p=38">No comments</span></a></span>
+      </div>
+
+      <h1 class="entry-title">Recurrent Convolutional Network for Video-based Person Re-Identification</h1>      
+      <div class="entry-content">
+        <p>&nbsp;</p>
+<iframe width='100%' height='400' frameborder='0' scrolling='yes' src='https://drive.google.com/file/d/1BmYNm4lIx4725y1CddO3HOP89FNObDNF/preview?usp=drivesdk' allowfullscreen></iframe>
+      </div>
+
+      
+    </div>
+
+</article><!-- #post-## -->
+
+  <nav class="post-navigation clearfix"> 
+  	<span class="post-nav-link previous-post">
+			<a href="/notes-on-variational-autoencoder/" rel="prev"><span class="previous-post-label">Previous Post</span><br />Notes on Variational Autoencoder</a>		</span>
+		<span class="post-nav-link next-post">
+			<a href="/a-siamese-long-short-term-memory-architecture-for-human-re-identication/" rel="next"><span class="next-post-label">Next Post</span><br />A Siamese Long Short-Term Memory Architecture for Human Re-Identication</a>		</span>
+	</nav>
+	
+<div id="disqus_thread">
+    </div>
+
+
+	</div>
+</div><!-- #main-content" -->
+
+<aside id="right-sidebar" class="right-sidebar">
+	<div id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div><div id="text-2" class="widget widget_text"><h3 class="heading">Links</h3>			<div class="textwidget"><p><strong>Repositories</strong><br />
+<a href="https://github.com/kurnianggoro" target="_blank">Github</a><br />
+<a href="https://gist.github.com/kurnianggoro">Gist</a></p>
+<p><strong>Social Media</strong><br />
+<a href="https://www.youtube.com/user/kurnianggoro/videos" target="_blank">YouTube</a></p>
+<p><strong>Others</strong><br />
+<a href="http://islab.ulsan.ac.kr/blog.php?m=kurnianggoro&amp;p=papers" target="_blank">Lab Homepage</a><a href="https://scholar.google.co.kr/citations?user=84P26OkAAAAJ&amp;hl=en&amp;oi=sra"><br />
+Google Scholar</a><br />
+<a href="https://www.google-melange.com/archive/gsoc/2015/orgs/opencv/projects/kurnianggoro.html" target="_blank">GSOC 2015</a><br />
+<a href="https://summerofcode.withgoogle.com/archive/2017/projects/4919219854508032/" target="_blank">GSOC 2017</a></p>
+</div>
+		</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="heading">Recent Posts</h3>		<ul>
+											<li>
+					<a href="/deeply-learned-part-aligned-representations-for-person-re-identification/">Deeply-Learned Part-Aligned Representations for Person Re-Identification</a>
+									</li>
+											<li>
+					<a href="/notes-on-support-vector-machine/">Notes on Support Vector Machine</a>
+									</li>
+											<li>
+					<a href="/understanding-the-gradient-descent-and-backpropagation/">Understanding the Gradient Descent and Backpropagation</a>
+									</li>
+											<li>
+					<a href="/beyond-triplet-loss-a-deep-quadruplet-network-for-person-re-identification/">Beyond triplet loss: a deep quadruplet network for person re-identification</a>
+									</li>
+											<li>
+					<a href="/iecon-2017/">IECON 2017</a>
+									</li>
+					</ul>
+		</div><div id="categories-2" class="widget widget_categories"><h3 class="heading">Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="/category/computer-vision/" >Computer Vision</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="/category/deep-learning/" >Deep Learning</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="/category/machine-learning/" >Machine Learning</a>
+</li>
+		</ul>
+</div><div id="archives-2" class="widget widget_archive"><h3 class="heading">Archives</h3>		<ul>
+			<li><a href='/2018/01/'>January 2018</a></li>
+		</ul>
+		</div></aside><!-- #right-sidebar -->
+
+					</div>
+				</div>
+      </div><!-- #main -->
+      
+        <div id="postscript" class="clearfix">
+    <div class="postscript-inner">
+      <div class="container"> 
+        <div id="tag_cloud-2" class="widget widget_tag_cloud"><h3 class="heading">Tags</h3><div class="tagcloud"><a href="/tag/aae/" class="tag-cloud-link tag-link-15 tag-link-position-1" style="font-size: 8pt;" aria-label="aae (1 item)">aae</a>
+<a href="/tag/attributes/" class="tag-cloud-link tag-link-19 tag-link-position-2" style="font-size: 8pt;" aria-label="attributes (1 item)">attributes</a>
+<a href="/tag/autoencoder/" class="tag-cloud-link tag-link-14 tag-link-position-3" style="font-size: 8pt;" aria-label="autoencoder (1 item)">autoencoder</a>
+<a href="/tag/classification/" class="tag-cloud-link tag-link-6 tag-link-position-4" style="font-size: 22pt;" aria-label="classification (2 items)">classification</a>
+<a href="/tag/epipolar-geometry/" class="tag-cloud-link tag-link-13 tag-link-position-5" style="font-size: 8pt;" aria-label="epipolar geometry (1 item)">epipolar geometry</a>
+<a href="/tag/homography/" class="tag-cloud-link tag-link-12 tag-link-position-6" style="font-size: 8pt;" aria-label="homography (1 item)">homography</a>
+<a href="/tag/hyperplane/" class="tag-cloud-link tag-link-21 tag-link-position-7" style="font-size: 8pt;" aria-label="hyperplane (1 item)">hyperplane</a>
+<a href="/tag/krls/" class="tag-cloud-link tag-link-7 tag-link-position-8" style="font-size: 22pt;" aria-label="KRLS (2 items)">KRLS</a>
+<a href="/tag/machine-learning/" class="tag-cloud-link tag-link-9 tag-link-position-9" style="font-size: 8pt;" aria-label="machine learning (1 item)">machine learning</a>
+<a href="/tag/mser/" class="tag-cloud-link tag-link-16 tag-link-position-10" style="font-size: 8pt;" aria-label="mser (1 item)">mser</a>
+<a href="/tag/pedestrian/" class="tag-cloud-link tag-link-20 tag-link-position-11" style="font-size: 8pt;" aria-label="pedestrian (1 item)">pedestrian</a>
+<a href="/tag/person-re-identification/" class="tag-cloud-link tag-link-18 tag-link-position-12" style="font-size: 8pt;" aria-label="person re-identification (1 item)">person re-identification</a>
+<a href="/tag/regression/" class="tag-cloud-link tag-link-5 tag-link-position-13" style="font-size: 22pt;" aria-label="regression (2 items)">regression</a>
+<a href="/tag/rkhs/" class="tag-cloud-link tag-link-8 tag-link-position-14" style="font-size: 8pt;" aria-label="RKHS (1 item)">RKHS</a>
+<a href="/tag/rls/" class="tag-cloud-link tag-link-10 tag-link-position-15" style="font-size: 8pt;" aria-label="RLS (1 item)">RLS</a>
+<a href="/tag/stereo-vision/" class="tag-cloud-link tag-link-11 tag-link-position-16" style="font-size: 8pt;" aria-label="stereo vision (1 item)">stereo vision</a>
+<a href="/tag/traffict-sign/" class="tag-cloud-link tag-link-17 tag-link-position-17" style="font-size: 8pt;" aria-label="traffict sign (1 item)">traffict sign</a>
+<a href="/tag/triplet-network/" class="tag-cloud-link tag-link-22 tag-link-position-18" style="font-size: 8pt;" aria-label="triplet network (1 item)">triplet network</a></div>
+</div>      </div>
+    </div>
+  </div>
+
+      <footer id="footer">
+      	<div class="footer-inner">
+      		<div class="container">
+        		Copyright 2018 L. Kurnianggoro<br />
+            WordPress theme designed by <a href="http://siteturner.com">Siteturner</a>
+        	</div>
+        </div>
+      </footer><!-- #footer-->
+
+  </div><!-- #page -->
+  <script type='text/javascript' src='/wp-content/themes/why-hello-there/assets/js/jquery.fitvids.js?ver=1.1.0'></script>
+<script type='text/javascript' src='/wp-content/themes/why-hello-there/assets/js/jquery.dcd.doubletaptogo.js?ver=3.2.0'></script>
+<script type='text/javascript' src='/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='/wp-content/themes/why-hello-there/assets/js/whyhellothere.js?ver=1.2.0'></script>
+<script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.9.1'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.9.1","language":""},"disqusIdentifier":"38 http://kurnianggoro.github.io/?p=38","disqusShortname":"kurnianggoro","disqusTitle":"Recurrent Convolutional Network for Video-based Person Re-Identification","disqusUrl":"http://kurnianggoro.github.io/recurrent-convolutional-network-for-video-based-person-re-identification/","options":{"manualSync":false},"postId":"38"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"kurnianggoro"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.9.1'></script>
+</body>
+</html>
